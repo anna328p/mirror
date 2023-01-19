@@ -1,0 +1,16 @@
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  mirror-keydb:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download file
+        run: curl -O http://fvonline-db.bplaced.net/export/keydb_eng.zip
+      
+      - name: Upload to artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: keydb
+          path: keydb_eng.zip
