@@ -1,3 +1,5 @@
+name: mirror
+
 on:
   workflow_dispatch:
   schedule:
@@ -19,4 +21,4 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          file: keydb_eng.zip
+          files: keydb_eng.zip
