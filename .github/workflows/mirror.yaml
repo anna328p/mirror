@@ -16,7 +16,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Download file
-        run: touch keydb_eng.zip
+        run: >
+          echo 'lol' > keydb_eng.zip
         # run: curl -O http://fvonline-db.bplaced.net/export/keydb_eng.zip
       
       - name: Upload to artifacts
