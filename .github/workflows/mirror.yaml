@@ -19,7 +19,7 @@ jobs:
         run: curl -O http://fvonline-db.bplaced.net/export/keydb_eng.zip
       
       - name: Upload to artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: keydb
           path: keydb_eng.zip
